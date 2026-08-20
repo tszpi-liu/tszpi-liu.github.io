@@ -37,7 +37,7 @@
 
       <section class="tilt-split tilt-dark">
         <div><p class="product-kicker">MECHANICAL SYSTEM</p><h2>Designed from the inside out.</h2><p>A compact three-axis mechanism gives the laptop platform pitch, roll, and yaw. The final architecture combines the motors, camera, electronics, and power system in a low-profile base.</p></div>
-        <div class="cad-placeholder exploded-placeholder"><span class="placeholder-tag">01 / EXPLODED VIEW</span><strong>YOUR CAD EXPLODED VIEW</strong><p>Drop in a transparent PNG or SVG of the assembly.</p><i class="exploded-part part-one"></i><i class="exploded-part part-two"></i><i class="exploded-part part-three"></i><i class="exploded-part part-four"></i></div>
+        <figure class="cad-image exploded-image"><img src="assets/tilt-exploded-view.png" alt="Exploded CAD view of TILT's leaf platform, motors, and base" /><figcaption><span>01 / EXPLODED VIEW</span>Three-axis mechanical architecture</figcaption></figure>
       </section>
 
       <section class="tilt-specs">
@@ -46,22 +46,25 @@
       </section>
 
       <section class="tilt-visual-grid">
-        <div class="cad-placeholder render-placeholder"><span class="placeholder-tag">02 / CAD RENDER</span><strong>YOUR DETAIL RENDER</strong><p>Use this space for a close-up of the leaf plate, joint, or base.</p></div>
+        <figure class="cad-image render-image"><img src="assets/tilt-product-render.png" alt="CAD render of the TILT laptop stand" /><figcaption><span>02 / CAD RENDER</span>Lotus-leaf platform and compact base</figcaption></figure>
         <div class="visual-copy"><p class="product-kicker">FORM LANGUAGE</p><h2>Inspired by the quiet intelligence of a lotus leaf.</h2><p>The sculpted top plate brings softness to a technical object, while the blue base references water. Together, they make TILT feel less like a machine and more like a responsive desk companion.</p></div>
       </section>
 
       <section class="tilt-interaction">
         <div class="interaction-heading"><p class="product-kicker">INTERACTION</p><h2>It notices.<br />Then it responds.</h2><p>Camera-based posture sensing is paired with small, understandable movements—providing feedback without a notification, alarm, or command.</p></div>
         <div class="interaction-cards">
-          <article><span>MODE 01</span><h3>Lean to the side</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT leans in the opposite direction, helping return the screen to the user’s line of sight.</p></article>
-          <article><span>MODE 02</span><h3>Hunchback</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT rises with the user so the display remains easy to see while posture is readjusted.</p></article>
-          <article><span>MODE 03</span><h3>Long work hours</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT turns aside to signal a break, inviting the user to rest before continuing.</p></article>
+          <article><span>MODE 01</span><h3>Lean to the side</h3><div class="interaction-sequence"><img src="assets/interaction-lean-1.jpg" alt="A user begins leaning to the side while using TILT" /><img src="assets/interaction-lean-2.jpg" alt="TILT responds to the user's sideways lean" /><img src="assets/interaction-lean-3.jpg" alt="The user regains a clearer viewing position with TILT" /></div><p>TILT leans in the opposite direction, helping return the screen to the user’s line of sight.</p></article>
+          <article><span>MODE 02</span><h3>Hunchback</h3><div class="interaction-sequence"><img src="assets/interaction-hunchback-1.jpg" alt="A user begins to hunch over a laptop" /><img src="assets/interaction-hunchback-2.jpg" alt="TILT raises the laptop display in response to hunching" /><img src="assets/interaction-hunchback-3.jpg" alt="The user readjusts posture while using TILT" /></div><p>TILT rises with the user so the display remains easy to see while posture is readjusted.</p></article>
+          <article><span>MODE 03</span><h3>Long work hours</h3><div class="interaction-sequence"><img src="assets/interaction-longwork-1.jpg" alt="A user works for an extended period with TILT" /><img src="assets/interaction-longwork-2.jpg" alt="TILT signals a break during long work" /><img src="assets/interaction-longwork-3.jpg" alt="The user takes a rest after TILT's movement cue" /></div><p>TILT turns aside to signal a break, inviting the user to rest before continuing.</p></article>
         </div>
       </section>
 
       <section class="tilt-split tilt-algorithm">
-        <div><p class="product-kicker">INTELLIGENCE LAYER</p><h2>Seeing posture before it becomes a problem.</h2><p>MediaPipe provides real-time upper-body and facial landmarks. A vision-language model validates posture changes against a calibrated baseline before the system actuates.</p></div>
-        <div class="cad-placeholder algorithm-placeholder"><span class="placeholder-tag">03 / SYSTEM DIAGRAM</span><strong>YOUR INTERACTION FLOW OR ALGORITHM DIAGRAM</strong><p>Reserve this area for a pipeline graphic, model visualisation, or video still.</p></div>
+        <div><p class="product-kicker">INTELLIGENCE LAYER</p><h2>Two stages.<br />One gentle response.</h2><p>TILT begins with fast, interpretable posture estimation, then asks a VLM to validate sustained changes before it moves. This two-stage approach keeps the interaction responsive while reducing false corrections.</p></div>
+        <div class="algorithm-toggles" aria-label="Two-stage TILT posture estimation and validation">
+          <details class="algorithm-toggle"><summary><img src="assets/mediapipe-landmark-estimation.png" alt="" /><span><b>VERSION 1</b><strong>MediaPipe-based estimation</strong><small>Fast, interpretable landmark tracking</small></span><i>+</i></summary><div class="algorithm-detail"><p>MediaPipe detects upper-body and facial landmarks, then compares them with the user's calibrated baseline.</p><div class="formula-card"><strong>Landmark displacement</strong><span>f<sub>lean</sub> = (Shoulder-mid<sub>x</sub> − Shoulder-mid<sub>x0</sub>) / Shoulder-wide<sub>0</sub></span></div><div class="formula-card"><strong>Forward cue</strong><span>f<sub>forward</sub> = w<sub>1</sub>ΔFace-size + w<sub>2</sub>ΔFace<sub>y</sub> + w<sub>3</sub>ΔChin-to-torso</span></div><div class="formula-card safe"><strong>Rule-based actuation</strong><span>θ<sub>motor</sub> = Clip(k<sub>gain</sub>(f<sub>deviation-range</sub> − t<sub>threshold</sub>), θ<sub>min</sub>, θ<sub>max</sub>)</span><small>Clip keeps movement within a safe angle range.</small></div></div></details>
+          <details class="algorithm-toggle"><summary><img src="assets/vlm-posture-validation.png" alt="" /><span><b>VERSION 2</b><strong>VLM-assisted validation</strong><small>Validate sustained posture changes</small></span><i>+</i></summary><div class="algorithm-detail vlm-detail"><p>When MediaPipe flags a possible change, the calibrated baseline and detected posture frames are sent to a cloud VLM via API.</p><div class="vlm-step emphasis">The VLM validates the MediaPipe-triggered change against the calibrated baseline before actuation.</div><small class="vlm-note">A short temporal capture window helps prevent bad postures from being missed by MediaPipe.</small></div></details>
+        </div>
       </section>
 
       <section class="tilt-outcome"><p class="product-kicker">OUTCOME</p><h2>Less correction.<br /><em>More comfort.</em></h2><p>TILT explores an alternative to explicit ergonomic reminders: a calm, physical interface that supports healthier posture through implicit interaction.</p><a href="/#work">Back to selected work <span>↗</span></a></section>
