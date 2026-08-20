@@ -3,32 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TILT — project case study" />
+    <meta name="description" content="TILT — a plant-inspired intelligent laptop teammate for implicit posture correction." />
     <title>TILT · Your Name</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../style.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="tilt-page">
+    <header class="tilt-nav">
       <a class="brand" href="/">your name<span>.</span></a>
-      <nav aria-label="Main navigation"><a href="/#about">About</a><a href="/#work">Work</a><a href="/#contact">Contact</a></nav>
+      <a class="tilt-nav-link" href="/#work">All work <span>↗</span></a>
     </header>
+
     <main>
-      <section class="project-hero">
-        <a class="back-link" href="/#work">← Back to selected work</a>
-        <p class="eyebrow">CASE STUDY / 01</p>
-        <h1>TILT</h1>
-        <p class="project-summary">A concise one-line description of TILT: what it is, who it is for, and the difference it makes.</p>
-        <dl class="project-meta"><div><dt>ROLE</dt><dd>Your role</dd></div><div><dt>YEAR</dt><dd>2026</dd></div><div><dt>DISCIPLINE</dt><dd>Product Design</dd></div></dl>
+      <section class="tilt-intro">
+        <p class="product-kicker">TILT / 2026</p>
+        <h1>A more <em>natural</em><br />way to sit well.</h1>
+        <p class="product-lede">TILT is a plant-inspired intelligent laptop teammate. It detects subtle posture changes and gently repositions the screen—without interrupting your flow.</p>
+        <dl class="product-facts"><div><dt>ROLE</dt><dd>Industrial Design<br />Interaction Design</dd></div><div><dt>TEAM</dt><dd>Ts Zpi Liu · Sijin Quo<br />Zhengji Liang · Guyin Tian</dd></div><div><dt>CONTEXT</dt><dd>IEEE RO-MAN 2026<br />HKU JC STEM Lab</dd></div></dl>
       </section>
-      <section class="case-section"><p class="section-number">01 / OVERVIEW</p><div><h2>The challenge</h2><p>Introduce the problem TILT addresses. Keep this section focused: what was difficult, who experienced the problem, and why it was worth solving.</p><div class="case-visual">ADD PROJECT IMAGE OR SCREENSHOT</div></div></section>
-      <section class="case-section"><p class="section-number">02 / APPROACH</p><div><h2>How I approached it</h2><p>Describe your process, from research and early concepts to the decisions that shaped the outcome. Add images, sketches, or prototypes here when they are ready.</p></div></section>
-      <section class="case-section"><p class="section-number">03 / OUTCOME</p><div><h2>What changed</h2><p>Summarise the result. You can include measurable impact, what you learned, and what you would improve in the next iteration.</p></div></section>
-      <section class="contact"><p class="eyebrow">NEXT PROJECT</p><h2><a href="/#work">Explore more work.</a></h2></section>
+
+      <section class="product-stage" aria-label="TILT product hero">
+        <!-- Replace this block with your primary product render: assets/tilt-hero-render.png -->
+        <div class="product-orbit orbit-one"></div><div class="product-orbit orbit-two"></div><div class="product-plate"><span class="plate-vein vein-a"></span><span class="plate-vein vein-b"></span><span class="plate-vein vein-c"></span></div><div class="product-stem"></div><div class="product-base"><span></span><span></span></div>
+        <p class="stage-label">PRIMARY PRODUCT RENDER<br /><small>Replace with a hero CAD render</small></p>
+      </section>
+
+      <section class="tilt-statement">
+        <p class="product-kicker">THE IDEA</p>
+        <h2>Posture support that moves <em>with</em> you.</h2>
+        <p>Long desk sessions often lead to unconscious slumping, lateral leaning, and neck strain. TILT counters these small shifts with an ambient movement language: it leans, rises, or turns the screen toward a more comfortable viewing position.</p>
+      </section>
+
+      <section class="tilt-split tilt-dark">
+        <div><p class="product-kicker">MECHANICAL SYSTEM</p><h2>Designed from the inside out.</h2><p>A compact three-axis mechanism gives the laptop platform pitch, roll, and yaw. The final architecture combines the motors, camera, electronics, and power system in a low-profile base.</p></div>
+        <div class="cad-placeholder exploded-placeholder"><span class="placeholder-tag">01 / EXPLODED VIEW</span><strong>YOUR CAD EXPLODED VIEW</strong><p>Drop in a transparent PNG or SVG of the assembly.</p><i class="exploded-part part-one"></i><i class="exploded-part part-two"></i><i class="exploded-part part-three"></i><i class="exploded-part part-four"></i></div>
+      </section>
+
+      <section class="tilt-specs">
+        <p class="product-kicker">MOTION ARCHITECTURE</p>
+        <div class="spec-grid"><article><span>01</span><h3>Pitch</h3><p>Raises or lowers the display angle to help recover a neutral viewing height.</p></article><article><span>02</span><h3>Roll</h3><p>Balances lateral leaning by guiding the screen toward the user's visual centre.</p></article><article><span>03</span><h3>Yaw</h3><p>Rotates up to 90° to support long work sessions and changing desk positions.</p></article></div>
+      </section>
+
+      <section class="tilt-visual-grid">
+        <div class="cad-placeholder render-placeholder"><span class="placeholder-tag">02 / CAD RENDER</span><strong>YOUR DETAIL RENDER</strong><p>Use this space for a close-up of the leaf plate, joint, or base.</p></div>
+        <div class="visual-copy"><p class="product-kicker">FORM LANGUAGE</p><h2>Inspired by the quiet intelligence of a lotus leaf.</h2><p>The sculpted top plate brings softness to a technical object, while the blue base references water. Together, they make TILT feel less like a machine and more like a responsive desk companion.</p></div>
+      </section>
+
+      <section class="tilt-interaction">
+        <div class="interaction-heading"><p class="product-kicker">INTERACTION</p><h2>It notices.<br />Then it responds.</h2><p>Camera-based posture sensing is paired with small, understandable movements—providing feedback without a notification, alarm, or command.</p></div>
+        <div class="interaction-cards">
+          <article><span>MODE 01</span><h3>Lean to the side</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT leans in the opposite direction, helping return the screen to the user’s line of sight.</p></article>
+          <article><span>MODE 02</span><h3>Hunchback</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT rises with the user so the display remains easy to see while posture is readjusted.</p></article>
+          <article><span>MODE 03</span><h3>Long work hours</h3><div class="interaction-placeholder">YOUR INTERACTION PHOTO / VIDEO</div><p>TILT turns aside to signal a break, inviting the user to rest before continuing.</p></article>
+        </div>
+      </section>
+
+      <section class="tilt-split tilt-algorithm">
+        <div><p class="product-kicker">INTELLIGENCE LAYER</p><h2>Seeing posture before it becomes a problem.</h2><p>MediaPipe provides real-time upper-body and facial landmarks. A vision-language model validates posture changes against a calibrated baseline before the system actuates.</p></div>
+        <div class="cad-placeholder algorithm-placeholder"><span class="placeholder-tag">03 / SYSTEM DIAGRAM</span><strong>YOUR INTERACTION FLOW OR ALGORITHM DIAGRAM</strong><p>Reserve this area for a pipeline graphic, model visualisation, or video still.</p></div>
+      </section>
+
+      <section class="tilt-outcome"><p class="product-kicker">OUTCOME</p><h2>Less correction.<br /><em>More comfort.</em></h2><p>TILT explores an alternative to explicit ergonomic reminders: a calm, physical interface that supports healthier posture through implicit interaction.</p><a href="/#work">Back to selected work <span>↗</span></a></section>
     </main>
-    <footer><span>© <span id="year"></span> Your Name</span><span>Built with care.</span></footer>
+    <footer class="tilt-footer"><span>© <span id="year"></span> Your Name</span><span>TILT · 2026</span></footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
