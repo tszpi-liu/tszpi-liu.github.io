@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="个人主页" />
+    <title>你的名字 · 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">你的名字<span>.</span></a>
+      <nav aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#work">作品</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1 id="hero-title">把想法变成<br /><em>有用的体验。</em></h1>
+        <p class="intro">我是你的名字，一名专注于设计、产品与创意技术的独立创作者。这里记录我正在做的事。</p>
+        <a class="button" href="#work">查看我的作品 <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section id="about" class="section about">
+        <p class="section-number">01 / ABOUT</p>
+        <div>
+          <h2>你好，很高兴认识你。</h2>
+          <p>我热衷于从模糊的问题中找到清晰的方向，并用简洁、好用的方式把它实现出来。目前我正在探索你感兴趣的领域。</p>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <p class="section-number">02 / SELECTED WORK</p>
+        <div class="projects">
+          <a class="project project-one" href="#" aria-label="项目一：替换为项目链接">
+            <span class="project-index">01</span>
+            <div><p>产品设计</p><h3>项目名称一</h3></div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project project-two" href="#" aria-label="项目二：替换为项目链接">
+            <span class="project-index">02</span>
+            <div><p>网页开发</p><h3>项目名称二</h3></div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project project-three" href="#" aria-label="项目三：替换为项目链接">
+            <span class="project-index">03</span>
+            <div><p>个人实验</p><h3>项目名称三</h3></div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <p class="eyebrow">03 / CONTACT</p>
+        <h2>有想法想聊？<br /><a href="mailto:hello@example.com">给我写封信。</a></h2>
+        <div class="socials">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">X / Twitter</a>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© <span id="year"></span> 你的名字</span><span>Built with care.</span></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
