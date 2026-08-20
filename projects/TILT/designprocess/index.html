@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TILT design process and project facts." />
+    <title>TILT Design Process · Tsz Pi Liu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body class="tilt-page process-page">
+    <header class="tilt-nav"><a class="brand" href="/">TszPi<span>.</span></a><div class="tilt-nav-links"><a class="tilt-nav-link" href="../">TILT overview <span>↗</span></a><a class="tilt-nav-link" href="/#work">All work <span>↗</span></a></div></header>
+    <main>
+      <section class="process-hero"><p class="product-kicker">TILT / BEHIND THE PRODUCT</p><h1>Design process<br />&amp; project facts.</h1><p>TILT brings together physical computing, robot mechanism design, and ambient interaction to make posture support feel less like a reminder and more like a responsive desk companion.</p></section>
+      <section class="project-facts-section"><p class="product-kicker">PROJECT FACTS</p><div class="facts-grid"><article><span>CONTEXT</span><strong>RO-MAN Robot Design Competition</strong><small>2026</small></article><article><span>TEAM</span><strong>Tsz Pi Liu · Sijin Qu<br />Zhengji Liang · Guiyin Tian</strong><small>JC-STEM Lab</small></article><article><span>PLATFORM</span><strong>Three-axis robotic laptop stand</strong><small>Pitch · roll · yaw</small></article><article><span>TECHNOLOGY</span><strong>Raspberry Pi · MediaPipe · VLM</strong><small>Vision-guided actuation</small></article></div></section>
+      <section class="process-chapters"><p class="product-kicker">THE JOURNEY</p><div class="chapter-list"><article><span>01</span><div><h2>Observe the problem.</h2><p>Desk workers often correct posture only after discomfort becomes obvious. The early research asked how a physical object could offer quieter, more timely support.</p></div></article><article><span>02</span><div><h2>Turn a laptop stand into a teammate.</h2><p>Plant-inspired form studies established a softer, non-intrusive character—one that can move with the user rather than command them.</p></div></article><article><span>03</span><div><h2>Engineer a compact response.</h2><p>Mechanical iterations brought the camera, motors, electronics, and power system into a low-profile base while preserving pitch, roll, and yaw movement.</p></div></article><article><span>04</span><div><h2>Validate before movement.</h2><p>MediaPipe provides fast landmark-based estimation; VLM-assisted validation helps confirm sustained posture changes before the stand reacts.</p></div></article></div></section>
+      <section class="process-next"><p class="product-kicker">NEXT</p><h2>More drawings,<br /><em>prototypes, and tests.</em></h2><p>This page is designed to grow with future development materials: iteration photos, CAD details, user-study findings, and video documentation.</p><a href="../">Back to TILT <span>↗</span></a></section>
+    </main>
+    <footer class="tilt-footer"><span>© <span id="year"></span> Tsz Pi Liu</span><span>TILT · 2026</span></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
