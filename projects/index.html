@@ -8,15 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style.css?v=20260822-project-filters" />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/#experience">Experience</a><a href="/projects/">Projects</a><a href="/#contact">Contact</a></nav></header>
+    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/">Projects</a><a href="/#experience">Experience &amp; Community</a><a href="/#contact">Contact</a></nav></header>
     <main>
       <section class="project-hero"><a class="back-link" href="/">← Back home</a><p class="eyebrow">SELECTED PROJECTS</p><h1>Things I’m<br /><em>making.</em></h1><p class="project-summary">A growing collection of research, design, and creative-technology projects.</p></section>
-      <section class="section"><p class="section-number">01 / FEATURED</p><div class="projects"><a class="project project-one" href="/projects/TILT/"><span class="project-index">01</span><div><p>Physical interaction · Robotics</p><h3>TILT</h3></div><span class="arrow">↗</span></a><div class="project project-two"><span class="project-index">02</span><div><p>Web development · To be released</p><h3>iGEM</h3></div></div></div></section>
+      <section class="section project-archive"><p class="section-number">01 / PROJECT ARCHIVE</p><div><div class="project-filter" aria-label="Search projects by category"><div><p>SEARCH BY CATEGORY</p><div class="filter-tags" role="group" aria-label="Filter by skill"><button class="filter-tag is-active" type="button" data-filter="all">All</button><button class="filter-tag" type="button" data-filter="robotics">Robotics</button><button class="filter-tag" type="button" data-filter="physical">Physical interaction</button><button class="filter-tag" type="button" data-filter="web">Web development</button></div></div><label class="project-sort">Sort by time <select aria-label="Sort projects by time"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label></div><p class="project-count" aria-live="polite">2 projects</p><div class="projects project-list"><a class="project project-one" href="/projects/TILT/" data-year="2026" data-skills="robotics physical"><span class="project-index">01</span><div><p>2026 · Physical interaction · Robotics</p><h3>TILT</h3></div><span class="arrow">↗</span></a><article class="project project-two" data-year="2026" data-skills="web"><span class="project-index">02</span><div><p>2026 · Web development · To be released</p><h3>iGEM</h3></div><span class="arrow">Soon</span></article></div></div></section>
     </main>
     <footer><span>© <span id="year"></span> TszPi</span><span>Built with care.</span></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const projectList = document.querySelector('.project-list');
+      const projectCards = [...projectList.children];
+      const count = document.querySelector('.project-count');
+      const sort = document.querySelector('.project-sort select');
+      let activeFilter = 'all';
+      function updateProjects() {
+        const visible = projectCards.filter((card) => activeFilter === 'all' || card.dataset.skills.split(' ').includes(activeFilter));
+        projectCards.forEach((card) => { card.hidden = !visible.includes(card); });
+        const direction = sort.value === 'newest' ? -1 : 1;
+        [...projectCards].sort((a, b) => direction * (Number(a.dataset.year) - Number(b.dataset.year))).forEach((card) => projectList.append(card));
+        count.textContent = `${visible.length} ${visible.length === 1 ? 'project' : 'projects'}`;
+      }
+      document.querySelectorAll('.filter-tag').forEach((tag) => tag.addEventListener('click', () => {
+        activeFilter = tag.dataset.filter;
+        document.querySelectorAll('.filter-tag').forEach((item) => item.classList.toggle('is-active', item === tag));
+        updateProjects();
+      }));
+      sort.addEventListener('change', updateProjects);
+    </script>
   </body>
 </html>
