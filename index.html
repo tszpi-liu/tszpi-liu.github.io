@@ -3,79 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal website" />
-    <title>Tsz Pi Liu · Personal Website</title>
+    <meta name="description" content="Tsz Pi Liu — designer, maker, and creative technologist." />
+    <title>TszPi · Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="portfolio-home">
     <header class="site-header">
       <a class="brand" href="#top">TszPi<span>.</span></a>
       <nav aria-label="Main navigation">
-        <a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">HELLO, I’M</p>
-        <h1 id="hero-title">Turning ideas into<br /><em>useful experiences.</em></h1>
-        <p class="intro">I’m Tsz Pi Liu, a designer and builder focused on thoughtful products, clear communication, and creative technology.</p>
-        <a class="button" href="#about">Get to know me <span aria-hidden="true">↓</span></a>
+      <section class="profile-hero" aria-labelledby="hero-title">
+        <div class="profile-copy">
+          <p class="eyebrow">DESIGNER · MAKER · CREATIVE TECHNOLOGIST</p>
+          <h1 id="hero-title">Tsz Pi<br /><em>Liu.</em></h1>
+          <p class="profile-intro">I turn emerging technology into thoughtful physical and digital experiences—moving between interaction design, robotics, and visual storytelling.</p>
+          <div class="profile-links"><a href="#projects">See selected projects <span>↓</span></a><a href="mailto:hello@example.com">Get in touch <span>↗</span></a></div>
+        </div>
+        <figure class="profile-portrait"><img src="projects/TILT/assets/interaction-hunchback-2.jpg" alt="Tsz Pi Liu working with the TILT prototype" /><figcaption><span>TSZ PI LIU</span><span>HONG KONG · 2026</span></figcaption></figure>
       </section>
 
-      <section id="about" class="section about">
-        <p class="section-number">01 / ABOUT</p>
-        <div>
-          <h2>A little about me.</h2>
-          <p>I enjoy turning ambiguous problems into simple, practical outcomes. I care about the details that make digital experiences feel clear, useful, and human.</p>
-          <p>Currently, I am exploring <strong>your area of interest</strong> and looking for opportunities to learn, collaborate, and create meaningful work.</p>
+      <section id="about" class="identity-band">
+        <p class="section-number">01 / AT A GLANCE</p>
+        <div class="identity-content"><h2>A multidisciplinary practice rooted in <em>making.</em></h2><p>I enjoy giving technical systems a more human character. From a quick sketch to a working prototype, I care about the small decisions that make an interaction intuitive, expressive, and worth using.</p><div class="focus-tags"><span>Product design</span><span>Physical interaction</span><span>Creative technology</span><span>Visual communication</span></div></div>
+      </section>
+
+      <section id="journey" class="journey-section">
+        <div class="journey-heading"><p class="section-number">02 / STUDY &amp; EXPERIENCE</p><h2>Learning by<br /><em>building.</em></h2><p>A single timeline keeps academic context, project work, and professional experience in one readable place.</p></div>
+        <div class="journey-content">
+          <div class="study-grid"><article><span>MAJOR</span><strong>Data &amp; Systems<br />Engineering</strong><small>The University of Hong Kong</small></article><article><span>MINOR</span><strong>Your minor or<br />secondary focus</strong><small>Replace this with your field of study</small></article></div>
+          <div class="timeline">
+            <article><p>2026</p><div><span>PROJECT / COMPETITION</span><h3>TILT</h3><small>RO-MAN Robot Design Competition</small><p>Plant-inspired laptop teammate exploring implicit posture correction through computer vision and physical movement.</p></div></article>
+            <article><p>NOW</p><div><span>CURRENT FOCUS</span><h3>Designing with emerging technology</h3><small>Hong Kong</small><p>Exploring how creative technology, interaction design, and fabrication can shape more considerate everyday tools.</p></div></article>
+            <article class="timeline-draft"><p>YEAR</p><div><span>EXPERIENCE</span><h3>Add a role or milestone</h3><small>Organisation · Location</small><p>Use this space for an internship, studio role, research project, or achievement.</p></div></article>
+          </div>
         </div>
       </section>
 
-      <section id="skills" class="section">
-        <p class="section-number">02 / SKILLS</p>
-        <div class="skills-grid">
-          <article><h3>Design</h3><p>Product thinking, UI/UX, prototyping, user research</p></article>
-          <article><h3>Build</h3><p>HTML, CSS, JavaScript, responsive web development</p></article>
-          <article><h3>Work style</h3><p>Communication, problem solving, collaboration, curiosity</p></article>
-        </div>
+      <section class="capabilities-section">
+        <p class="section-number">03 / CAPABILITIES</p>
+        <div class="capability-list"><article><span>01</span><div><h3>Visual &amp; product design</h3><p>Drawing, visual communication, product thinking, UI/UX, and prototyping.</p></div></article><article><span>02</span><div><h3>3D &amp; fabrication</h3><p>3D modelling, CAD, rapid prototyping, and 3D printing for physical ideas.</p></div></article><article><span>03</span><div><h3>Technology &amp; language</h3><p>Creative coding, camera-based interaction, technical communication, and multilingual collaboration.</p></div></article></div>
       </section>
 
-      <section id="experience" class="section timeline-section">
-        <p class="section-number">03 / EXPERIENCE</p>
-        <div>
-          <div class="timeline-item"><p class="timeline-date">2024 — PRESENT</p><div><h3>Job Title</h3><p class="timeline-place">Company Name · City, Country</p><p>Briefly describe your role, the kind of work you do, and one meaningful contribution or achievement.</p></div></div>
-          <div class="timeline-item"><p class="timeline-date">2022 — 2024</p><div><h3>Previous Job Title</h3><p class="timeline-place">Previous Company · City, Country</p><p>Briefly describe your responsibilities, the team you worked with, or the impact you made.</p></div></div>
-        </div>
-      </section>
-
-      <section id="education" class="section timeline-section">
-        <p class="section-number">04 / EDUCATION</p>
-        <div>
-          <div class="timeline-item"><p class="timeline-date">2020 — 2024</p><div><h3>Degree or Programme</h3><p class="timeline-place">University Name · City, Country</p><p>Add your major, a relevant focus area, academic distinction, or a memorable project.</p></div></div>
-          <div class="timeline-item"><p class="timeline-date">2017 — 2020</p><div><h3>Secondary Education</h3><p class="timeline-place">School Name · City, Country</p></div></div>
-        </div>
-      </section>
-
-      <section id="work" class="section">
-        <p class="section-number">05 / SELECTED WORK</p>
+      <section id="projects" class="projects-showcase">
+        <div class="projects-heading"><p class="section-number">04 / SELECTED PROJECTS</p><h2>A few things<br />I’ve <em>made.</em></h2></div>
         <div class="projects">
-          <a class="project project-one" href="/projects/TILT/" aria-label="View the TILT project"><span class="project-index">01</span><div><p>Product Design</p><h3>TILT</h3></div><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project project-two" href="#" aria-label="Project two: replace with project link"><span class="project-index">02</span><div><p>Web Development</p><h3>Project Two</h3></div><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="project project-three" href="#" aria-label="Project three: replace with project link"><span class="project-index">03</span><div><p>Personal Experiment</p><h3>Project Three</h3></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="project project-one" href="/projects/TILT/" aria-label="View the TILT project"><span class="project-index">01</span><div><p>Physical interaction · Robotics</p><h3>TILT</h3><small>A plant-inspired intelligent laptop teammate for implicit posture correction.</small></div><span class="arrow" aria-hidden="true">↗</span></a>
+          <div class="project project-muted"><span class="project-index">02</span><div><p>COMING SOON</p><h3>Next project</h3><small>More work will live here soon.</small></div></div>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <p class="eyebrow">06 / CONTACT</p>
-        <h2>Have something in mind?<br /><a href="mailto:hello@example.com">Let’s talk.</a></h2>
-        <div class="socials"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div>
+      <section id="contact" class="contact contact-home">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2>Have something<br />in <em>mind?</em></h2>
+        <a class="contact-email" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
+        <div class="socials"><a href="https://github.com/tszpi-liu" target="_blank" rel="noreferrer">GitHub</a><a href="#">LinkedIn</a></div>
       </section>
     </main>
-    <footer><span>© <span id="year"></span> Tsz Pi Liu</span><span>Built with care.</span></footer>
+    <footer><span>© <span id="year"></span> TszPi</span><span>Designed &amp; built with care.</span></footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
