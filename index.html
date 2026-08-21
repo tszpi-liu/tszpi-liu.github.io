@@ -34,12 +34,13 @@
 
       <section id="skills" class="section portfolio-skills">
         <p class="section-number">02 / SKILLS</p>
-        <div class="skills-grid">
-          <article><span>01 / ART &amp; DESIGN</span><h3>Art &amp; product design</h3><p>Chinese painting — Grade 10 (flower-and-bird painting); product design; visual communication.</p></article>
-          <article><span>02 / 3D &amp; MAKING</span><h3>3D creation</h3><p>3D modelling, rendering, animation, 3D printing, and rapid prototyping.</p></article>
-          <article><span>03 / CODE</span><h3>Programming</h3><p>Python, creative coding, and vibe coding for fast experiments and prototypes.</p></article>
-          <article><span>04 / LANGUAGE</span><h3>Languages</h3><p>Cantonese, Mandarin, English, and Shaanxi dialect.</p></article>
+        <div class="skill-cards" aria-label="Skill categories">
+          <button class="skill-card" type="button" data-skill="art"><span>01</span><strong>Art &amp;<br />Design</strong><small>Painting · Product</small></button>
+          <button class="skill-card" type="button" data-skill="making"><span>02</span><strong>3D &amp;<br />Making</strong><small>Model · Print</small></button>
+          <button class="skill-card" type="button" data-skill="code"><span>03</span><strong>Code &amp;<br />Prototyping</strong><small>Python · Vibe coding</small></button>
+          <button class="skill-card" type="button" data-skill="language"><span>04</span><strong>Languages</strong><small>粤 · 普 · EN · 陕</small></button>
         </div>
+        <p class="skills-hint">Tap a card to explore.</p>
       </section>
 
       <section id="education" class="section timeline-section">
@@ -73,7 +74,31 @@
         <div class="socials"><a href="https://github.com/tszpi-liu" target="_blank" rel="noreferrer">GitHub</a><a href="#">LinkedIn</a></div>
       </section>
     </main>
+    <dialog class="skill-dialog" aria-labelledby="skill-dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close skill details">×</button>
+      <p class="section-number" id="skill-dialog-index"></p>
+      <h2 id="skill-dialog-title"></h2>
+      <p id="skill-dialog-copy"></p>
+    </dialog>
     <footer><span>© <span id="year"></span> TszPi</span><span>Built with care.</span></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const skillDetails = {
+        art: { index: '01 / ART & DESIGN', title: 'Art & product design', copy: 'Chinese painting — Grade 10, specialising in flower-and-bird painting. I also explore product design and visual communication.' },
+        making: { index: '02 / 3D & MAKING', title: '3D creation', copy: '3D modelling, rendering, animation, 3D printing, and rapid prototyping for turning ideas into tangible tests.' },
+        code: { index: '03 / CODE', title: 'Programming', copy: 'Python, creative coding, and vibe coding for fast experiments, interactive prototypes, and research tools.' },
+        language: { index: '04 / LANGUAGE', title: 'Languages', copy: 'Cantonese, Mandarin, English, and Shaanxi dialect.' }
+      };
+      const skillDialog = document.querySelector('.skill-dialog');
+      document.querySelectorAll('.skill-card').forEach((card) => card.addEventListener('click', () => {
+        const detail = skillDetails[card.dataset.skill];
+        document.getElementById('skill-dialog-index').textContent = detail.index;
+        document.getElementById('skill-dialog-title').textContent = detail.title;
+        document.getElementById('skill-dialog-copy').textContent = detail.copy;
+        skillDialog.showModal();
+      }));
+      document.querySelector('.dialog-close').addEventListener('click', () => skillDialog.close());
+      skillDialog.addEventListener('click', (event) => { if (event.target === skillDialog) skillDialog.close(); });
+    </script>
   </body>
 </html>
