@@ -39,4 +39,5 @@
 
 /* ACES Studio product photography */
 .product-story .product-art { display:block; min-height:0; margin:0; padding:0; aspect-ratio:16 / 9; border:0; background:#ddd; }.product-story .product-art::before { display:none; }.product-story .product-art img { display:block; width:100%; height:100%; object-fit:cover; }.product-story .product-art span,.product-story .product-art strong { display:none; }
+.product-story h3 span { display:inline-block; margin-top:5px; font:500 .48em/1.15 "DM Sans",sans-serif; letter-spacing:-.035em; }
 @media (max-width:700px) { .product-story .product-art { min-height:0; aspect-ratio:16 / 9; } }
