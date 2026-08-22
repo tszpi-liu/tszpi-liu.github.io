@@ -65,7 +65,7 @@
       <section id="experience" class="section timeline-section">
         <p class="section-number">05 / EXPERIENCE &amp; COMMUNITY</p>
         <div>
-          <div class="timeline-item"><p class="timeline-date">JUN 2026 — PRESENT</p><div><h3>Research Intern</h3><p class="timeline-place">JC-STEM Lab of Smart Cyber-Physical Industrial Systems (RoboCPS Lab)</p><p>Working on TILT and other research projects; providing mechanical support by creating CAD parts for fellow researchers; and assisting with day-to-day lab duties.</p><a class="experience-link" href="https://cps.hku.hk/" target="_blank" rel="noreferrer">Visit the lab <span aria-hidden="true">↗</span></a></div></div>
+          <div class="timeline-item"><p class="timeline-date">JUN 2026 — PRESENT</p><div><h3>Research Intern</h3><p class="timeline-place">JC-STEM Lab of Smart Cyber-Physical Industrial Systems (RoboCPS Lab)</p><p>Leading an independent research project: <a class="inline-project-link" href="/projects/TILT/">TILT</a>; providing mechanical support by creating CAD parts for fellow researchers; and assisting with day-to-day lab duties.</p><a class="experience-link" href="https://cps.hku.hk/" target="_blank" rel="noreferrer">Visit the lab <span aria-hidden="true">↗</span></a></div></div>
           <div class="timeline-item"><p class="timeline-date">2026 — 2027</p><div><h3>HKU GLOCAL Connector</h3><p class="timeline-place">The University of Hong Kong</p><p>Supporting cross-cultural exchange and community connection as part of the HKU GLOCAL programme.</p></div></div>
         </div>
       </section>
@@ -86,8 +86,8 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
       const skillDetails = {
-        art: { index: '01 / ART & DESIGN', title: 'Art & product design', items: ['Chinese painting — Level 10 (highest level), specialising in flower-and-bird painting.', 'Product design: turning concepts into clear, tangible experiences.', 'Proficient with Procreate for visual communication and image-making.'] },
-        making: { index: '02 / 3D & MAKING', title: '3D creation', items: ['3D modelling with Fusion 360 and SolidWorks for prototypes and physical interaction.', 'Rendering and animation for visualising ideas.', '3D printing and rapid prototyping.'] },
+        art: { index: '01 / ART & DESIGN', title: 'Art & product design', items: ['Chinese painting — Level 10 (highest level), specialising in flower-and-bird painting.', 'Product design: turning concepts into clear, tangible experiences.', 'Proficient with <strong>Procreate</strong> for visual communication and image-making.'] },
+        making: { index: '02 / 3D & MAKING', title: '3D creation', items: ['3D modelling with <strong>Fusion 360</strong> and <strong>SolidWorks</strong> for prototypes and physical interaction.', 'Rendering and animation for visualising ideas.', '3D printing and rapid prototyping.'] },
         code: { index: '03 / CODE', title: 'Code & prototyping', items: ['Python for research tools and rapid experiments.', 'Creative coding for interactive explorations.', 'Vibe coding to turn an idea into a working prototype quickly.'] },
         language: { index: '04 / LANGUAGE', title: 'Languages', items: ['Cantonese.', 'Mandarin.', 'English.', 'Shaanxi dialect.'] }
       };
@@ -97,7 +97,7 @@
         document.getElementById('skill-dialog-index').textContent = detail.index;
         document.getElementById('skill-dialog-title').textContent = detail.title;
         document.getElementById('skill-dialog-list').replaceChildren(...detail.items.map((item) => {
-          const entry = document.createElement('li'); entry.textContent = item; return entry;
+          const entry = document.createElement('li'); entry.innerHTML = item; return entry;
         }));
         skillDialog.showModal();
       }));
