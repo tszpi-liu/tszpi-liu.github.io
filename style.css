@@ -55,3 +55,11 @@
 /* Single light-indigo canvas for the full collection page */
 .aces-page { background:#e7e8f2; color:#202440; }.aces-page .site-header { border-color:#bfc3d6; }.aces-page .brand,.aces-page nav a { color:#202440; }.aces-page .brand span { color:#a64c67; }.aces-hero { background:radial-gradient(circle at 80% 24%,rgba(186,194,231,.72) 0%,rgba(231,232,242,0) 45%); border-color:#bfc3d6; }.aces-hero h1 { color:#202440; }.aces-hero h1 em { color:#76558f; }.aces-hero .project-summary { color:#4e5573; }.aces-facts { border-color:#bfc3d6; }.aces-facts dt { color:#6d7391; }.aces-facts dd { color:#27304f; }.aces-intro { background:transparent; color:#202440; border-color:#bfc3d6; }.aces-intro .section-number { color:#a64c67; }.aces-page footer { border-color:#bfc3d6; color:#68708a; }
 @media (max-width:700px) { .product-story .product-art { min-height:0; aspect-ratio:16 / 9; } }
+
+/* Deep collection-card pairing */
+.collection-nature { background:#173d32; border-color:#2f6857; color:#f2f5e9; }
+.collection-nature .eyebrow,.collection-nature h2 em,.collection-nature a span { color:#b8e276; }
+.collection-nature .collection-heading > p:not(.eyebrow),.collection-nature .product-story > div:last-child > p:last-child { color:#cad9cf; }
+.collection-nature .collection-heading a { color:#f2f5e9; border-color:#b8e276; }
+.collection-nature .product-story h3 span { color:#b8e276; }
+.collection-nature .product-art { border-color:rgba(242,245,233,.26); }
