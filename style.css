@@ -1,3 +1,8 @@
+
+
+/* Compact projects hero */
+.project-archive-hero { padding-top:82px; padding-bottom:48px; }.project-archive-hero .back-link { margin-bottom:38px; }.project-archive-hero h1 { margin-bottom:14px; white-space:nowrap; }.project-archive-hero .project-summary { margin-bottom:0; }
+@media (max-width:700px) { .project-archive-hero { padding-top:58px; padding-bottom:36px; }.project-archive-hero .back-link { margin-bottom:28px; }.project-archive-hero h1 { font-size:clamp(45px,12vw,62px); white-space:normal; } }
 :root { --ink:#18251f; --paper:#f4f1e9; --accent:#de4b2d; --line:#cfc9bd; }
 * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; color:var(--ink); background:var(--paper); font-family:"DM Sans",sans-serif; } a { color:inherit; }
 .site-header,main,footer { max-width:1160px; margin:auto; padding-left:32px; padding-right:32px; }.site-header { height:88px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }.brand { font:500 21px "DM Mono",monospace; text-decoration:none; letter-spacing:-1px; }.brand span { color:var(--accent); } nav { display:flex; gap:23px; } nav a,.socials a { font-size:14px; text-decoration:none; } nav a:hover,.socials a:hover { color:var(--accent); }
