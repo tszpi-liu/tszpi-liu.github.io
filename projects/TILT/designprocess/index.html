@@ -65,5 +65,11 @@
         materialSections.forEach(section => materialObserver.observe(section));
       }
     </script>
+    <script>
+      const originLabel = document.querySelector('.journey-origin .product-kicker');
+      const originCopy = document.querySelector('.journey-origin div:last-child > p');
+      if (originLabel) originLabel.textContent = 'PERSONAL STARTING POINT';
+      if (originCopy) originCopy.innerHTML = '<q>TILT began with a pattern I noticed in my own daily life. When I am absorbed in work, I rarely notice how I am sitting until my lower back starts to ache. Long hours holding a mouse or checking a phone with my right hand made me realise how quietly these posture habits build up. I began to ask: how might a desk companion help us notice and gently correct these patterns before discomfort builds up?</q><cite>— Tsz Pi Liu</cite>';
+    </script>
   </body>
 </html>
