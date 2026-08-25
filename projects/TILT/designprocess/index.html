@@ -25,5 +25,45 @@
     <script>const appearanceHeading=document.querySelector('.appearance-study h2'); if(appearanceHeading)appearanceHeading.innerHTML='Exploring<br />appearances.'; const processLabel=document.querySelector('.process-chapters .product-kicker'); if(processLabel)processLabel.remove(); const processHeadings=document.querySelectorAll('.chapter-list > article h2'); if(processHeadings[0])processHeadings[0].textContent='First version of TILT.'; const finalHeading=document.querySelector('#final-version h2'); if(finalHeading)finalHeading.textContent='Final TILT prototype.'; const imageReplacements={"TILT camera angle test":"../assets/process-camera-angle-test-hd.jpg","Early TILT circuit arrangement":"../assets/process-hardware-circuits-early-hd.jpg","Refined TILT circuit arrangement":"../assets/process-hardware-circuits-refined-hd.jpg"}; document.querySelectorAll('.mechanical-detail img').forEach(image=>{if(imageReplacements[image.alt])image.src=imageReplacements[image.alt];});</script>
     <script>const colourHeading=document.querySelector('#colour h2'); if(colourHeading)colourHeading.textContent='Choosing a colour direction.';</script>
     <script>const chapterList=document.querySelector('.chapter-list'); if(chapterList)chapterList.insertAdjacentHTML('afterbegin','<article class="sketch-chapter"><div class="chapter-content"><div><h2>Started by Sketch</h2><p>The first idea was drawn as a lotus leaf: a calm surface for the laptop, with three motor positions mapped beneath it to bring the plant-inspired gesture to life.</p></div><div class="chapter-visuals sketch-visual"><figure><img src="../assets/process-started-by-sketch.png" alt="Hand-drawn lotus leaf concept with three motor positions" /><figcaption>INITIAL SKETCH</figcaption></figure></div></div></article>');</script>
+    <script>
+      const productProcess = document.querySelector('.process-chapters');
+      if (productProcess) {
+        productProcess.id = 'product-design';
+        productProcess.insertAdjacentHTML('afterbegin', '<div class="process-section-intro"><p class="product-kicker">PRODUCT DESIGN PROCESS</p><h2>Product design<br />process.</h2><p>From the first lotus sketch to a working prototype, each iteration refined TILT’s movement, ergonomics, electronics, colour, and final form.</p></div>');
+        productProcess.querySelectorAll('.chapter-list h2').forEach(heading => {
+          const subheading = document.createElement('h3');
+          subheading.innerHTML = heading.innerHTML;
+          heading.replaceWith(subheading);
+        });
+      }
+      const processLinks = '<a href="#origin">TILT begins with</a><a href="#appearance">Pre-user study</a><a href="#product-design">Product design process</a>';
+      const heroNav = document.querySelector('.process-jump-nav');
+      if (heroNav) heroNav.innerHTML = processLinks;
+      const floatNav = document.querySelector('.process-float-nav');
+      if (floatNav) {
+        floatNav.innerHTML = processLinks;
+        const links = [...floatNav.querySelectorAll('a')];
+        const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+        const setActive = id => links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`));
+        const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); }), { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+        sections.forEach(section => sectionObserver.observe(section));
+      }
+    </script>
+    <script>
+      const materialsAnchor = document.querySelector('.process-chapters');
+      if (materialsAnchor) materialsAnchor.insertAdjacentHTML('afterend', '<section class="materials-section" id="materials"><div class="materials-intro"><p class="product-kicker">MATERIALS</p><h2>Competition<br />materials.</h2><p>Selected communication materials prepared for the RO-MAN Robot Design Competition.</p></div><div class="materials-grid"><a class="material-card" href="https://drive.google.com/file/d/1XGX2idcUXOMEZpPVc0pLBnv_VzpZTuvz/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>01 / POSTER</span><strong>TILT research<br />poster</strong><p>Read the full project overview, system design, interaction context, and final concept.</p><b>Open poster <i>↗</i></b></a><a class="material-card" href="https://drive.google.com/file/d/1u2OEP9FhGNfqdkHdEptyeaK_d0DfU7FZ/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>02 / TRIFOLD</span><strong>TILT project<br />trifold</strong><p>Browse the compact exhibition leaflet created to introduce TILT at a glance.</p><b>Open trifold <i>↗</i></b></a></div></section>');
+      const materialLinks = '<a href="#origin">TILT begins with</a><a href="#appearance">Pre-user study</a><a href="#product-design">Product design process</a><a href="#materials">Materials</a>';
+      const updatedHeroNav = document.querySelector('.process-jump-nav');
+      if (updatedHeroNav) updatedHeroNav.innerHTML = materialLinks;
+      const updatedFloatNav = document.querySelector('.process-float-nav');
+      if (updatedFloatNav) {
+        updatedFloatNav.innerHTML = materialLinks;
+        const materialNavLinks = [...updatedFloatNav.querySelectorAll('a')];
+        const materialSections = materialNavLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+        const setMaterialActive = id => materialNavLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`));
+        const materialObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) setMaterialActive(entry.target.id); }), { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+        materialSections.forEach(section => materialObserver.observe(section));
+      }
+    </script>
   </body>
 </html>
