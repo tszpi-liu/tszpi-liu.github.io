@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../style.css?v=20260825-contact" />
+  <link rel="stylesheet" href="../../style.css?v=20260827-award" />
   </head>
   <body class="tilt-page">
     <header class="tilt-nav">
       <a class="brand" href="/">TszPi<span>.</span></a>
-      <div class="tilt-nav-links"><button class="booth-trigger" type="button" data-booth-open>Visit our booth</button><a class="tilt-nav-link" href="designprocess/">Design process <span>↗</span></a><a class="tilt-nav-link" href="/#projects">All projects <span>↗</span></a></div>
+      <div class="tilt-nav-links"><button class="award-trigger" type="button" data-award-open>Best Technical Design Award</button><a class="tilt-nav-link" href="designprocess/">Design process <span>↗</span></a><a class="tilt-nav-link" href="/#projects">All projects <span>↗</span></a></div>
     </header>
 
     <main>
@@ -70,18 +70,18 @@
       <section class="tilt-outcome"><p class="product-kicker">OUTCOME</p><h2>Less interruption.<br /><em>More comfort.</em></h2><p>TILT explores an alternative to explicit ergonomic reminders: a calm, physical interface that supports healthier posture through implicit interaction.</p><a href="designprocess/">View project facts &amp; design process <span>↗</span></a></section>
       <section class="tilt-contact"><p>If you are interested in this project or have suggestions to share, we would be grateful to hear from you at <a href="mailto:u3659013@connect.hku.hk">u3659013@connect.hku.hk</a>.</p></section>
     </main>
-    <dialog class="booth-dialog" id="booth-dialog" aria-labelledby="booth-title">
-      <button class="booth-close" type="button" data-booth-close aria-label="Close booth information">×</button>
-      <div class="booth-copy"><p class="product-kicker">MEET TILT AT RO-MAN · 24–27 AUG</p><h2 id="booth-title">ID <em>06</em> <span>2/F</span></h2><div class="booth-location-row"><p class="booth-location"><strong>Robot Design Competition Zone</strong><br />Kitakyushu International Convention Zone</p><img src="assets/tilt-roman-booth-id06.jpg" alt="The TILT team and prototype at the IEEE RO-MAN booth" /></div><div class="booth-invitation"><small>Come by to meet the team and see the TILT prototype in person.</small></div></div>
+    <dialog class="award-dialog" id="award-dialog" aria-labelledby="award-title">
+      <button class="award-close" type="button" data-award-close aria-label="Close award announcement">×</button>
+      <div class="award-copy"><p class="product-kicker">IEEE RO-MAN 2026 · ROBOT DESIGN COMPETITION</p><h2 id="award-title"><em>Best Technical<br />Design Award</em></h2><p>We are honoured that TILT received the <strong>Best Technical Design Award</strong>.</p><figure><img src="assets/tilt-best-technical-design-award.jpg" alt="The TILT team receiving the Best Technical Design Award at IEEE RO-MAN 2026" /><figcaption>TILT team · IEEE RO-MAN 2026</figcaption></figure></div>
     </dialog>
     <footer class="tilt-footer"><span>© <span id="year"></span> Tsz Pi Liu</span><span>TILT · 2026</span></footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-      const boothDialog = document.getElementById('booth-dialog');
-      document.querySelectorAll('[data-booth-open]').forEach((button) => button.addEventListener('click', () => boothDialog.showModal()));
-      document.querySelector('[data-booth-close]').addEventListener('click', () => boothDialog.close());
-      boothDialog.addEventListener('click', (event) => { if (event.target === boothDialog) boothDialog.close(); });
-      window.addEventListener('load', () => boothDialog.showModal(), { once: true });
+      const awardDialog = document.getElementById('award-dialog');
+      document.querySelectorAll('[data-award-open]').forEach((button) => button.addEventListener('click', () => awardDialog.showModal()));
+      document.querySelector('[data-award-close]').addEventListener('click', () => awardDialog.close());
+      awardDialog.addEventListener('click', (event) => { if (event.target === awardDialog) awardDialog.close(); });
+      window.addEventListener('load', () => awardDialog.showModal(), { once: true });
     </script>
   </body>
 </html>
