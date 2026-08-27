@@ -126,3 +126,10 @@ body.process-page { background:#d9e5da; }.journey-origin,.appearance-study,.proc
 .tilt-contact p { margin:0; }
 .tilt-contact a { color:#c3ed63; text-decoration:none; border-bottom:1px solid currentColor; }
 @media (max-width:760px) { .tilt-contact { padding:0 20px 75px; font-size:15px; } }
+
+/* IEEE RO-MAN award announcement */
+.award-trigger { padding:0; border:0; background:transparent; color:#c3ed63; cursor:pointer; font:12px "DM Mono",monospace; }
+.award-dialog { width:min(860px,calc(100vw - 32px)); max-width:none; max-height:88vh; overflow:auto; padding:0; border:1px solid rgba(195,237,99,.45); background:#101815; color:#f5f3ed; box-shadow:0 30px 100px rgba(0,0,0,.72); }
+.award-dialog::backdrop { background:rgba(3,7,5,.78); backdrop-filter:blur(7px); }
+.award-copy { padding:42px 44px 38px; }.award-copy h2 { margin:13px 0 18px; font-size:clamp(48px,7vw,84px); line-height:.88; letter-spacing:-.085em; }.award-copy h2 em { color:#c3ed63; font-style:normal; }.award-copy > p:not(.product-kicker) { max-width:530px; margin:0 0 26px; color:#c4d0c6; font-size:17px; line-height:1.55; }.award-copy > p strong { color:#f5f3ed; }.award-copy figure { margin:0; overflow:hidden; border:1px solid rgba(255,255,255,.17); }.award-copy img { display:block; width:100%; height:auto; }.award-copy figcaption { padding:10px 12px; color:#aebbb3; font:10px "DM Mono",monospace; letter-spacing:.06em; }.award-close { position:absolute; z-index:1; top:14px; right:14px; display:grid; width:34px; height:34px; place-items:center; border:1px solid rgba(255,255,255,.55); border-radius:50%; background:rgba(5,9,7,.65); color:#fff; cursor:pointer; font-size:26px; line-height:1; }
+@media (max-width:760px) { .award-trigger { font-size:10px; }.award-copy { padding:34px 23px 26px; }.award-copy > p:not(.product-kicker) { font-size:15px; } }
