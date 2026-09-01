@@ -9,34 +9,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../style.css?v=20260822-project-filters" />
+    <link rel="stylesheet" href="../framework/live-unified.css" />
   </head>
-  <body>
-    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/">Projects</a><a href="/#experience">Experience &amp; Community</a><a href="/#contact">Contact</a></nav></header>
+  <body class="projects-index-page index-page">
+    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav class="global-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/" aria-current="page">Projects</a><a href="/news/">News</a><a href="/#contact">Contact</a></nav></header>
     <main>
-      <section class="project-hero project-archive-hero"><a class="back-link" href="/">← Back home</a><p class="eyebrow">SELECTED PROJECTS</p><h1>Things I’m <em>making.</em></h1><p class="project-summary">A growing collection of research, design, and creative-technology projects.</p></section>
-      <section class="section project-archive"><p class="section-number">01 / PROJECT ARCHIVE</p><div><div class="project-filter" aria-label="Search projects by category"><div><p>SEARCH BY CATEGORY</p><div class="filter-tags" role="group" aria-label="Filter by skill"><button class="filter-tag is-active" type="button" data-filter="all">All</button><button class="filter-tag" type="button" data-filter="robotics">Robotics</button><button class="filter-tag" type="button" data-filter="physical">Physical interaction</button><button class="filter-tag" type="button" data-filter="product">Product design</button><button class="filter-tag" type="button" data-filter="web">Web development</button></div></div><label class="project-sort">Sort by time <select aria-label="Sort projects by time"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label></div><p class="project-count" aria-live="polite">3 projects</p><div class="projects project-list"><a class="project project-one" href="/projects/TILT/" data-year="2026" data-skills="robotics physical"><span class="project-index">01</span><div><p>2026 · Physical interaction · Robotics</p><h3>TILT</h3></div><span class="arrow">↗</span></a><article class="project project-two" data-year="2026" data-skills="web"><span class="project-index">02</span><div><p>2026 · Web development · To be released</p><h3>iGEM</h3></div><span class="arrow">Soon</span></article><a class="project project-three" href="/projects/productatSMS/" data-year="2023" data-skills="product"><span class="project-index">03</span><div><p>2023 · Product design · Illustration</p><h3>Product Design for Shenzhen Middle School</h3></div><span class="arrow">↗</span></a></div></div></section>
+      <section class="project-hero project-archive-hero index-hero"><h1>Things I’m <em>making.</em></h1><p class="project-summary">A growing collection of research, design, and creative-technology projects.</p><div class="index-filter"><p>SEARCH BY CATEGORY</p><div class="filter-tags" role="group" aria-label="Filter projects by category"><button class="filter-tag is-active" type="button" data-filter="all">All</button><button class="filter-tag" type="button" data-filter="robotics">Robotics</button><button class="filter-tag" type="button" data-filter="physical">Physical interaction</button><button class="filter-tag" type="button" data-filter="product">Product design</button><button class="filter-tag" type="button" data-filter="web">Web development</button></div></div></section>
+      <section class="section project-archive index-list"><div class="projects project-list"><a class="project project-one" href="/projects/TILT/" data-year="2026" data-skills="robotics physical"><span class="project-index">01</span><div><p>2026 · Physical interaction · Robotics</p><h3>TILT</h3></div><span class="arrow">↗</span></a><article class="project project-two" data-year="2026" data-skills="web"><span class="project-index">02</span><div><p>2026 · Web development · To be released</p><h3>iGEM</h3></div><span class="arrow">Soon</span></article><a class="project project-three" href="/projects/productatSMS/" data-year="2023" data-skills="product"><span class="project-index">03</span><div><p>2023 · Product design · Illustration</p><h3>Product Design for Shenzhen Middle School</h3></div><span class="arrow">↗</span></a></div></section>
+      <a class="index-back-home" href="/">Back to home <span aria-hidden="true">↗</span></a>
     </main>
-    <footer><span>© <span id="year"></span> TszPi</span><span>Built with care.</span></footer>
+    <footer><span>© <span id="year"></span> TszPi</span></footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
       const projectList = document.querySelector('.project-list');
       const projectCards = [...projectList.children];
-      const count = document.querySelector('.project-count');
-      const sort = document.querySelector('.project-sort select');
       let activeFilter = 'all';
       function updateProjects() {
         const visible = projectCards.filter((card) => activeFilter === 'all' || card.dataset.skills.split(' ').includes(activeFilter));
         projectCards.forEach((card) => { card.hidden = !visible.includes(card); });
-        const direction = sort.value === 'newest' ? -1 : 1;
-        [...projectCards].sort((a, b) => direction * (Number(a.dataset.year) - Number(b.dataset.year))).forEach((card) => projectList.append(card));
-        count.textContent = `${visible.length} ${visible.length === 1 ? 'project' : 'projects'}`;
       }
       document.querySelectorAll('.filter-tag').forEach((tag) => tag.addEventListener('click', () => {
         activeFilter = tag.dataset.filter;
         document.querySelectorAll('.filter-tag').forEach((item) => item.classList.toggle('is-active', item === tag));
         updateProjects();
       }));
-      sort.addEventListener('change', updateProjects);
     </script>
   </body>
 </html>
