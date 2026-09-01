@@ -10,87 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="news.css" />
+    <link rel="stylesheet" href="../framework/live-unified.css" />
   </head>
-  <body class="news-page">
+  <body class="news-page index-page">
     <header class="news-header">
-      <div class="news-header-start">
-        <a class="brand" href="../">TszPi<span>.</span></a>
-        <a class="news-home-link" href="../"><span aria-hidden="true">←</span> Back to home</a>
-      </div>
-      <p class="news-header-label" aria-hidden="true">NEWS / UPDATES</p>
-      <nav aria-label="Main navigation">
-        <a href="../#about">About</a><a href="../projects/">Projects</a><a href="../#contact">Contact</a>
+      <a class="brand" href="../">TszPi<span>.</span></a>
+      <nav class="global-nav" aria-label="Main navigation">
+        <a href="../#about">About</a><a href="../projects/">Projects</a><a href="./" aria-current="page">News</a><a href="../#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="news-hero" aria-labelledby="news-title">
-        <p class="eyebrow">TSZ PI LIU / 2026</p>
+      <section class="news-hero index-hero" aria-labelledby="news-title">
         <h1 id="news-title">News and Updates.</h1>
         <p>Things I am making, learning, and sharing along the way. Select an update to read more.</p>
       </section>
 
-      <section class="news-list" aria-label="News updates">
-        <button class="news-card news-card-award" type="button" data-news="roman">
-          <span class="news-date">AUG 2026</span><span class="news-type">AWARD</span>
-          <h2>TILT receives the Best Technical Design Award at IEEE RO-MAN.</h2>
-          <span class="news-open">Read update <b aria-hidden="true">↗</b></span>
-        </button>
-        <button class="news-card news-card-lab" type="button" data-news="lab">
-          <span class="news-date">JUN 2026 — PRESENT</span><span class="news-type">RESEARCH</span>
-          <h2>Joined HKU RoboCPS Lab as a Research Intern.</h2>
-          <span class="news-open">Read update <b aria-hidden="true">↗</b></span>
-        </button>
-        <button class="news-card news-card-community" type="button" data-news="glocal">
-          <span class="news-date">2026 — 2027</span><span class="news-type">COMMUNITY</span>
-          <h2>Supporting cross-cultural exchange as an HKU GLOCAL Connector.</h2>
-          <span class="news-open">Read update <b aria-hidden="true">↗</b></span>
-        </button>
+      <section class="news-list index-list" aria-label="News updates">
+        <details class="news-card news-card-award"><summary><span class="news-date">AUG 2026</span><span class="news-type">AWARD</span><h2>TILT receives the Best Technical Design Award at IEEE RO-MAN.</h2><span class="news-open"><span class="when-closed">Open update</span><span class="when-open">Close update</span> <b aria-hidden="true">+</b></span></summary><div class="news-detail"><p>As a first-year undergraduate, I was honoured to receive the <strong>Best Technical Design Award</strong> at my first academic conference, the IEEE RO-MAN 2026 Robot Design Competition, for TILT—a self-initiated project I led.</p><a href="/projects/TILT/">Explore TILT <span aria-hidden="true">↗</span></a></div></details>
+        <details class="news-card news-card-lab"><summary><span class="news-date">JUN 2026 — AUG 2026</span><span class="news-type">RESEARCH</span><h2>Joined HKU RoboCPS Lab as a Research Intern.</h2><span class="news-open"><span class="when-closed">Open update</span><span class="when-open">Close update</span> <b aria-hidden="true">+</b></span></summary><div class="news-detail"><p>I joined the JC-STEM Lab of Smart Cyber-Physical Industrial Systems (RoboCPS Lab) as a Research Intern from June to August 2026.</p><p>During the internship, I developed TILT, created CAD parts for fellow researchers, and supported the lab’s day-to-day making and research work.</p><a href="https://cps.hku.hk/" target="_blank" rel="noopener noreferrer">Visit RoboCPS Lab <span aria-hidden="true">↗</span></a></div></details>
+        <details class="news-card news-card-community"><summary><span class="news-date">2026 — 2027</span><span class="news-type">COMMUNITY</span><h2>Supporting cross-cultural exchange as an HKU GLOCAL Connector.</h2><span class="news-open"><span class="when-closed">Open update</span><span class="when-open">Close update</span> <b aria-hidden="true">+</b></span></summary><div class="news-detail"><p>As a local student and HKU GLOCAL Connector, I help international students feel more at home in Hong Kong by sharing local perspectives and creating opportunities to engage with the city’s culture and community.</p></div></details>
       </section>
+      <a class="index-back-home" href="/">Back to home <span aria-hidden="true">↗</span></a>
     </main>
-
-    <dialog class="news-dialog" aria-labelledby="news-dialog-title">
-      <button class="news-close" type="button" aria-label="Close news details">×</button>
-      <p class="eyebrow" id="news-dialog-meta"></p>
-      <h2 id="news-dialog-title"></h2>
-      <div id="news-dialog-body"></div>
-      <a class="news-dialog-link" id="news-dialog-link" hidden>View project <span aria-hidden="true">↗</span></a>
-    </dialog>
-
     <footer><span>© <span id="year"></span> TszPi</span></footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      const updates = {
-        roman: {
-          meta: 'AUG 2026 / AWARD',
-          title: 'TILT receives the Best Technical Design Award.',
-          body: '<p>As a first-year undergraduate, I was honoured to receive the <strong>Best Technical Design Award</strong> at my first academic conference, the IEEE RO-MAN 2026 Robot Design Competition, for TILT—a self-initiated project I led.</p>',
-          link: '/projects/TILT/', linkLabel: 'Explore TILT'
-        },
-        lab: {
-          meta: 'JUN 2026 — PRESENT / RESEARCH',
-          title: 'Researching at HKU RoboCPS Lab.',
-          body: '<p>I joined the JC-STEM Lab of Smart Cyber-Physical Industrial Systems (RoboCPS Lab) as a Research Intern.</p><p>Alongside developing TILT, I create CAD parts for fellow researchers and support the lab’s day-to-day making and research work.</p>',
-          link: 'https://cps.hku.hk/', linkLabel: 'Visit RoboCPS Lab'
-        },
-        glocal: {
-          meta: '2026 — 2027 / COMMUNITY',
-          title: 'Connecting communities through HKU GLOCAL.',
-          body: '<p>As a local student and HKU GLOCAL Connector, I help international students feel more at home in Hong Kong by sharing local perspectives and creating opportunities to engage with the city’s culture and community.</p>'
-        }
-      };
-      const dialog = document.querySelector('.news-dialog');
-      const link = document.getElementById('news-dialog-link');
-      document.querySelectorAll('[data-news]').forEach((card) => card.addEventListener('click', () => {
-        const update = updates[card.dataset.news];
-        document.getElementById('news-dialog-meta').textContent = update.meta;
-        document.getElementById('news-dialog-title').textContent = update.title;
-        document.getElementById('news-dialog-body').innerHTML = update.body;
-        if (update.link) { link.href = update.link; link.textContent = update.linkLabel + ' ↗'; link.hidden = false; } else { link.hidden = true; }
-        dialog.showModal();
-      }));
-      document.querySelector('.news-close').addEventListener('click', () => dialog.close());
-      dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
