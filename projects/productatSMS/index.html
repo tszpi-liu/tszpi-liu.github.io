@@ -9,16 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../style.css?v=20260822-aces-studio" />
+    <link rel="stylesheet" href="../../framework/live-unified.css" />
   </head>
   <body class="aces-page">
-    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/">Projects</a><a href="/#experience">Experience &amp; Community</a><a href="/#contact">Contact</a></nav></header>
+    <header class="site-header"><a class="brand" href="/">TszPi<span>.</span></a><nav class="global-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/" aria-current="page">Projects</a><a href="/news/">News</a><a href="/#contact">Contact</a></nav></header>
     <main>
       <section class="aces-hero">
-        <a class="back-link" href="/projects/">← All projects</a>
-        <p class="eyebrow">2023 — 2025 / ACES STUDIO</p>
+        <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href="/projects/">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Product Design</span></nav>
         <h1>Product Collection for<br /><em>Shenzhen Middle School.</em></h1>
         <p class="project-summary">A record of products I designed for Shenzhen Middle School Media Studio (ACES)—made for school fairs and open days, and carried home by students, families, and visitors.</p>
-        <dl class="aces-facts"><div><dt>AFFILIATION</dt><dd>ACES Studio<br />(Shenzhen Middle School Official Media Studio)</dd></div><div><dt>ROLE</dt><dd>Product &amp; visual designer</dd></div><div><dt>SALES</dt><dd>Campus fairs &amp;<br />open days</dd></div></dl>
+        <dl class="aces-facts"><div><dt>ROLE</dt><dd>Product &amp; visual designer</dd></div><div><dt>INSTITUTION</dt><dd>ACES Studio<br />Shenzhen Middle School</dd></div><div><dt>TIMELINE</dt><dd>2023–2025</dd></div><div><dt>CONTEXT</dt><dd>Campus fairs &amp;<br />open days</dd></div></dl>
       </section>
 
       <section class="aces-intro">
@@ -42,8 +42,10 @@
         </div>
       </section>
 
+      <nav class="project-navigation" aria-label="Project navigation"><a class="project-navigation-card" href="/"><span>Back to home</span><b aria-hidden="true">↗</b></a><a class="project-navigation-card" href="/projects/"><span>View other projects</span><b aria-hidden="true">↗</b></a></nav>
+
     </main>
-    <footer><span>© <span id="year"></span> TszPi</span><span>Media Studio product archive.</span></footer>
+    <footer><span>© <span id="year"></span> TszPi</span><span>Product Design</span></footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
