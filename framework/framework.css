@@ -157,11 +157,6 @@ h4 { font-size: var(--text-h4); line-height: 1.2; }
 .text-link { display: inline-block; padding-bottom: .2rem; border-bottom: 1px solid currentColor; font: var(--text-small) var(--font-mono); text-decoration: none; }
 .text-link:hover { color: var(--color-accent); }
 .action-group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-6); }
-.project-navigation { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-6); padding-block:var(--space-7); border-top:1px solid var(--color-border); }
-.navigation-card { padding:.625rem 0; display:flex; align-items:center; justify-content:flex-start; gap:var(--space-3); color:var(--color-text); font-size:clamp(1rem,1.45vw,1.25rem); font-weight:500; letter-spacing:-.025em; text-decoration:none; transition:color var(--motion),transform var(--motion); }
-.navigation-card:last-child { justify-content:flex-end; text-align:right; }
-.navigation-card b { color:var(--color-accent); font:1.125rem var(--font-mono); }
-.navigation-card:hover { color:var(--color-accent); transform:translateY(-2px); }
 .index-back-link { width: fit-content; display: inline-flex; align-items: center; gap: var(--space-3); padding-bottom: .3rem; border-bottom: 1px solid currentColor; color: var(--color-text-muted); font: 500 var(--text-small) var(--font-mono); text-decoration: none; transition: color var(--motion), gap var(--motion); }
 .index-back-link span { color: var(--color-accent); }
 .index-back-link:hover { gap: var(--space-4); color: var(--color-accent); }
@@ -190,7 +185,6 @@ h4 { font-size: var(--text-h4); line-height: 1.2; }
   .section-grid, .section-header { grid-template-columns: 1fr; gap: var(--space-5); }
   .grid--2, .grid--3 { grid-template-columns: 1fr; }
   .project-meta { grid-template-columns: 1fr 1fr; gap: var(--space-5); }
-  .project-navigation { grid-template-columns: 1fr; }
   .site-footer { flex-direction: column; }
   .index-layout { width:min(100% - 2.5rem,var(--container)); display:block; }
   .index-hero { min-height:0; padding:var(--space-7) 0 var(--space-5); }
