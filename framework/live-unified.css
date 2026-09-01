@@ -67,6 +67,21 @@
 .process-page .process-hero > p { color:#b9c9bd; }
 .process-page .process-hero .project-breadcrumb { --fw-accent:#c3ed63; color:#b9c9bd; }
 
+/* Full-bleed backgrounds must escape padded shells without moving their content. */
+.full-bleed-background { position:relative; isolation:isolate; background:none; }
+.full-bleed-background::before {
+  position:absolute;
+  z-index:-1;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  content:"";
+  background:var(--fw-full-bleed-background,var(--fw-canvas));
+  transform:translateX(-50%);
+}
+.aces-page .aces-hero { --fw-full-bleed-background:radial-gradient(circle at 80% 24%,rgba(186,194,231,.72) 0%,rgba(231,232,242,0) 45%); }
+
 /* Breadcrumb replaces decorative category/year labels in project heroes. */
 .project-breadcrumb {
   display:flex;
@@ -107,35 +122,37 @@
 .section p,.tilt-page main section p,.aces-page main section p { text-wrap:pretty; }
 .about div>p,.timeline-item div>p:last-child,.tilt-statement>p:last-child,.collection-heading>p { max-width:var(--fw-measure); }
 
-/* Standard project ending: two equal choices, no extra heading. */
+/* Standard project ending: quiet directional links, not oversized cards. */
 .project-navigation {
   width:min(calc(100% - 64px),var(--fw-width));
   margin:0 auto;
-  padding:64px 0;
+  padding:52px 0 44px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:32px;
+  border-top:1px solid var(--fw-border);
 }
 .project-navigation-card {
-  min-height:150px;
-  padding:24px;
+  min-height:0;
+  padding:10px 0;
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
   gap:24px;
-  border:1px solid var(--fw-border);
-  background:var(--fw-surface);
+  border:0;
+  background:transparent;
   color:var(--fw-text);
-  font-size:clamp(20px,2vw,28px);
-  font-weight:600;
-  letter-spacing:-.04em;
+  font-size:clamp(16px,1.45vw,20px);
+  font-weight:500;
+  letter-spacing:-.025em;
   text-decoration:none;
-  transition:background .18s ease,transform .18s ease;
+  transition:color .18s ease,transform .18s ease;
 }
-.project-navigation-card b { color:var(--fw-accent); font:24px "DM Mono",monospace; }
-.project-navigation-card:hover { background:#d7ded1; transform:translateY(-3px); }
+.project-navigation-card:last-child { justify-content:flex-end; text-align:right; }
+.project-navigation-card b { color:var(--fw-accent); font:18px "DM Mono",monospace; }
+.project-navigation-card:hover { color:var(--fw-accent); transform:translateY(-2px); }
 .tilt-page:not(.process-page) .project-navigation { --fw-border:rgba(255,255,255,.16); --fw-surface:#174a39; --fw-text:#f5f3ed; --fw-accent:#c3ed63; width:min(calc(100% - 80px),var(--fw-wide)); }
-.tilt-page:not(.process-page) .project-navigation-card:hover { background:#215c47; }
+.tilt-page:not(.process-page) .project-navigation-card:hover { color:#c3ed63; }
 .process-page .project-navigation { --fw-border:#afc3b2; --fw-surface:#f7faf5; --fw-text:#142319; --fw-accent:#35663f; width:min(calc(100% - 80px),1360px); }
 .aces-page .project-navigation { --fw-accent:#a93629; }
 
@@ -233,8 +250,8 @@ footer,.tilt-footer {
   .project-breadcrumb { margin-bottom:32px; }
   .product-facts,.aces-facts { grid-template-columns:1fr 1fr; gap:24px 18px; }
   .tilt-intro .award-trigger { margin-left:0; }
-  .project-navigation,.tilt-page:not(.process-page) .project-navigation,.process-page .project-navigation { width:calc(100% - 40px); padding:40px 0; grid-template-columns:1fr 1fr; gap:10px; }
-  .project-navigation-card { min-height:112px; padding:17px; font-size:17px; }
+  .project-navigation,.tilt-page:not(.process-page) .project-navigation,.process-page .project-navigation { width:calc(100% - 40px); padding:30px 0 24px; grid-template-columns:1fr 1fr; gap:16px; }
+  .project-navigation-card { min-height:0; padding:8px 0; font-size:15px; }
   .index-page main { display:block; padding:0 20px; }
   .index-page .index-hero { min-height:0; padding:42px 0 28px; border:0; }
   .index-page .index-hero h1 { margin-bottom:14px; font-size:clamp(43px,13vw,58px); }
