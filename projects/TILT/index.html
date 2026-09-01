@@ -9,20 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../style.css?v=20260827-award-compact" />
+  <link rel="stylesheet" href="../../framework/live-unified.css" />
   </head>
   <body class="tilt-page">
     <header class="tilt-nav">
       <a class="brand" href="/">TszPi<span>.</span></a>
-      <div class="tilt-nav-links"><button class="award-trigger" type="button" data-award-open>Best Technical Design Award</button><a class="tilt-nav-link" href="designprocess/">Design process <span>↗</span></a><a class="tilt-nav-link" href="/#projects">All projects <span>↗</span></a></div>
+      <nav class="global-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/" aria-current="page">Projects</a><a href="/news/">News</a><a href="/#contact">Contact</a></nav>
     </header>
 
     <main>
       <section class="tilt-intro">
-        <p class="product-kicker">RO-MAN ROBOT DESIGN COMPETITION / 2026</p>
+        <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href="/projects/">Projects</a><span aria-hidden="true">/</span><span aria-current="page">TILT</span></nav>
         <h1>TILT</h1>
         <p class="product-lede">A Plant-inspired Tracking and Intelligent Laptop Teammate for Implicit Posture Correction</p>
-        <dl class="product-facts"><div><dt>TEAM</dt><dd>Tsz Pi Liu · Sijin Qu<br />Zhengji Liang · Guiyin Tian</dd></div><div><dt>LAB</dt><dd>JC-STEM Lab of Smart Cyber-Physical Industrial Systems</dd></div><div><dt>CONTEXT</dt><dd>RO-MAN Robot Design Competition<br />2026</dd></div></dl>
+        <dl class="product-facts"><div><dt>ROLE</dt><dd>Project lead<br />Product &amp; interaction design</dd></div><div><dt>INSTITUTION</dt><dd>HKU RoboCPS Lab</dd></div><div><dt>TEAM</dt><dd>Tsz Pi Liu · Sijin Qu<br />Zhengji Liang · Guiyin Tian</dd></div><div><dt>CONTEXT</dt><dd>IEEE RO-MAN Robot Design Competition · 2026</dd></div></dl>
         <a class="process-link" href="designprocess/">Explore the design process <span>↗</span></a>
+        <button class="award-trigger" type="button" data-award-open>View Best Technical Design Award <span aria-hidden="true">↗</span></button>
       </section>
 
       <section class="product-stage video-stage" aria-label="TILT concept video">
@@ -69,12 +71,13 @@
 
       <section class="tilt-outcome"><p class="product-kicker">OUTCOME</p><h2>Less interruption.<br /><em>More comfort.</em></h2><p>TILT explores an alternative to explicit ergonomic reminders: a calm, physical interface that supports healthier posture through implicit interaction.</p><a href="designprocess/">View project facts &amp; design process <span>↗</span></a></section>
       <section class="tilt-contact"><p>If you are interested in this project or have suggestions to share, we would be grateful to hear from you at <a href="mailto:u3659013@connect.hku.hk">u3659013@connect.hku.hk</a>.</p></section>
+      <nav class="project-navigation" aria-label="Project navigation"><a class="project-navigation-card" href="/"><span>Back to home</span><b aria-hidden="true">↗</b></a><a class="project-navigation-card" href="/projects/"><span>View other projects</span><b aria-hidden="true">↗</b></a></nav>
     </main>
     <dialog class="award-dialog" id="award-dialog" aria-labelledby="award-title">
       <button class="award-close" type="button" data-award-close aria-label="Close award announcement">×</button>
       <div class="award-copy"><p class="product-kicker">IEEE RO-MAN 2026 · ROBOT DESIGN COMPETITION</p><h2 id="award-title"><em>Best Technical<br />Design Award</em></h2><p>We are honoured that TILT received the <strong>Best Technical Design Award</strong>.</p><figure><img src="assets/tilt-best-technical-design-award.jpg" alt="The TILT team receiving the Best Technical Design Award at IEEE RO-MAN 2026" /><figcaption>TILT team · IEEE RO-MAN 2026</figcaption></figure></div>
     </dialog>
-    <footer class="tilt-footer"><span>© <span id="year"></span> Tsz Pi Liu</span><span>TILT · 2026</span></footer>
+    <footer class="tilt-footer"><span>© <span id="year"></span> Tsz Pi Liu</span><span>TILT</span></footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
       const awardDialog = document.getElementById('award-dialog');
