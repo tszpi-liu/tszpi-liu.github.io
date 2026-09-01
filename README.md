@@ -293,9 +293,9 @@ Every informative image needs useful alt text. Every evidence image needs a capt
 
 Do not place more than one filled primary action in the same section.
 
-### Project closing navigation
+### Project ending
 
-Every project ends directly with the same quiet directional navigation: **View other projects** on the left and **Back to home** on the right. Use text links on one shared top rule—never oversized cards, a “Next” label, a heading, or explanatory copy.
+Project detail pages end with their final story module and proceed directly to the footer. Do not add duplicate **View other projects**, **Back to home**, “Next”, or closing-navigation controls; the canonical header already provides global navigation.
 
 ### Footer
 
