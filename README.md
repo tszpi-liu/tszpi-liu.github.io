@@ -70,7 +70,7 @@ Every page belongs to one of three families.
 │ One clear page title.                                      │
 │ One short promise, never a mini essay.                     │  Hero
 │                                                            │
-│ ROLE              TIMELINE              DISCIPLINES        │  Project only
+│ ROLE        INSTITUTION        TIMELINE        CONTEXT       │  Project only
 ├────────────────────────────────────────────────────────────┤
 │ 01 / LABEL          Section title                           │
 │                     Readable copy                           │  Section
@@ -243,7 +243,8 @@ Use a two-column layout only when both columns answer the same question or delib
 - Lead: maximum 160 characters.
 - Home hero may include a portrait; index heroes normally do not.
 - Project hero must begin with a clickable `Projects / Project name` breadcrumb.
-- Project hero must include role, institution, timeline, and disciplines.
+- Project hero must include role, institution, timeline, and context in one shared four-column facts row.
+- A hero with a full-width colour or gradient must use `.full-bleed-background`. Never apply that background only to a section trapped inside a padded shell: the exposed padding creates visible vertical seams at the viewport edge.
 
 ### Section
 
@@ -294,7 +295,7 @@ Do not place more than one filled primary action in the same section.
 
 ### Project closing navigation
 
-Every project ends directly with two equal navigation cards: **Back to home** on the left and **View other projects** on the right. Do not add a “Next” label, heading, explanatory copy, or divider above them.
+Every project ends directly with the same quiet directional navigation: **View other projects** on the left and **Back to home** on the right. Use text links on one shared top rule—never oversized cards, a “Next” label, a heading, or explanatory copy.
 
 ### Footer
 
