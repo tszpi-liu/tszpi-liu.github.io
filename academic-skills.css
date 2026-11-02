@@ -1,0 +1,91 @@
+.skill-groups article.skill-item {
+  padding: 0;
+}
+
+.skill-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.skill-toggle span:first-child {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.skill-toggle-mark {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.skill-toggle:hover span:first-child,
+.skill-toggle:focus-visible span:first-child {
+  color: var(--blue);
+}
+
+.skill-toggle:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.skill-toggle[aria-expanded="true"] .skill-toggle-mark {
+  font-size: 0;
+}
+
+.skill-toggle[aria-expanded="true"] .skill-toggle-mark::before {
+  content: "−";
+  font-size: 18px;
+}
+
+.skill-detail {
+  padding: 0 28px 13px 0;
+}
+
+.skill-detail ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0 0 0 18px;
+  color: #3f4c59;
+}
+
+.skill-detail li {
+  padding-left: 3px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.skill-detail[hidden] {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .skill-toggle {
+    padding: 11px 0;
+  }
+
+  .skill-toggle span:first-child {
+    font-size: 13px;
+  }
+
+  .skill-detail {
+    padding: 0 22px 11px 0;
+  }
+
+  .skill-detail li {
+    font-size: 12px;
+  }
+}

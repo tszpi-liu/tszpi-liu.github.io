@@ -1,0 +1,131 @@
+.project-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 66px;
+  padding: 0 max(28px, calc((100vw - 1220px) / 2 + 28px));
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  background: rgba(255, 255, 255, .97);
+  border-bottom: 1px solid #d9e0e6;
+  color: #17212b;
+}
+
+.project-wordmark {
+  color: #17212b;
+  font: 700 16px/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: -.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.project-main-nav a {
+  color: #17212b;
+  font: 13px/1.2 Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.project-main-nav a:hover,
+.project-main-nav a[aria-current="page"] {
+  color: #244f73;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-portfolio-status {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #17212b;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.project-portfolio-status strong {
+  font-size: 13px;
+}
+
+.project-portfolio-status small {
+  color: #586675;
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.project-portfolio-status:focus-visible {
+  outline: 2px solid #244f73;
+  outline-offset: 4px;
+}
+
+.project-portfolio-status small[hidden] {
+  display: none;
+}
+
+@media (max-width: 980px) and (min-width: 761px) {
+  .project-topbar {
+    gap: 28px;
+  }
+
+  .project-main-nav {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-topbar {
+    position: relative;
+    min-height: 0;
+    padding: 13px 6% 12px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-wordmark {
+    font-size: 16px;
+  }
+
+  .project-main-nav {
+    width: 100%;
+    justify-content: center;
+    gap: clamp(18px, 6vw, 30px);
+  }
+
+  .project-main-nav a {
+    font-size: 12px;
+  }
+
+  .project-portfolio-status {
+    margin: 0;
+    gap: 7px;
+  }
+
+  .project-portfolio-status strong {
+    font-size: 12px;
+  }
+
+  .project-portfolio-status small {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 390px) {
+  .project-main-nav {
+    gap: 17px;
+  }
+
+  .project-main-nav a {
+    font-size: 11px;
+  }
+}
