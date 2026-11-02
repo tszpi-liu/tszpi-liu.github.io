@@ -73,6 +73,49 @@
   display: none;
 }
 
+.project-authors {
+  margin: 17px 0 0;
+  color: #b9c9bd;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.project-authors strong {
+  color: #f5f3ed;
+  font-weight: 700;
+}
+
+.tilt-intro .project-award-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 0;
+  padding: 12px 15px;
+  border: 1px solid rgba(195, 237, 99, .58);
+  background: rgba(195, 237, 99, .08);
+  color: #f5f3ed;
+  text-decoration: none;
+}
+
+.tilt-intro .project-award-highlight:hover {
+  background: rgba(195, 237, 99, .16);
+  text-decoration: none;
+}
+
+.project-award-highlight strong {
+  color: #c3ed63;
+  font-size: 13px;
+}
+
+.project-award-highlight span:not([aria-hidden]) {
+  color: #b9c9bd;
+  font-size: 12px;
+}
+
+.project-award-highlight span[aria-hidden] {
+  color: #c3ed63;
+}
+
 @media (max-width: 980px) and (min-width: 761px) {
   .project-topbar {
     gap: 28px;
@@ -117,6 +160,17 @@
 
   .project-portfolio-status small {
     font-size: 9px;
+  }
+
+  .project-authors {
+    font-size: 13px;
+  }
+
+  .tilt-intro .project-award-highlight {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px 9px;
+    margin-top: 24px;
   }
 }
 
