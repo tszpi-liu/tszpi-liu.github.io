@@ -10,17 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../style.css?v=20260827-award-compact" />
   <link rel="stylesheet" href="../../framework/live-unified.css?v=20260901-nav4" />
-  </head>
+  <link rel="stylesheet" href="../../academic-project-header.css?v=20261103" />
+  <link rel="stylesheet" href="/site-shell.css"><script src="/site-shell.js" defer></script></head>
   <body class="tilt-page">
-    <header class="tilt-nav">
-      <a class="brand" href="/">TszPi<span>.</span></a>
-      <nav class="global-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/projects/" aria-current="page">Projects</a><a href="/news/">News</a><a href="/#contact">Contact</a></nav>
+    <header class="project-topbar">
+      <a class="project-wordmark" href="/">Liu Tsz Pi</a>
+      <nav class="project-main-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#projects" aria-current="page">Projects</a><a href="/#skills">Skills</a><a href="/#research-experience">Experience</a></nav>
+      <button class="project-portfolio-status" type="button" aria-expanded="false" aria-controls="project-portfolio-status-detail" title="Show portfolio status"><strong>Portfolio</strong><small id="project-portfolio-status-detail" hidden>Building in progress</small></button>
     </header>
     <a class="process-float-cta" href="designprocess/" aria-label="Open the TILT design process">Design process <span aria-hidden="true">↗</span></a>
 
     <main>
       <section class="tilt-intro">
-        <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href="/projects/">Projects</a><span aria-hidden="true">/</span><span aria-current="page">TILT</span></nav>
+        <nav class="project-breadcrumb" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span aria-current="page">TILT</span></nav>
         <h1>TILT</h1>
         <p class="product-lede">A Plant-inspired Tracking and Intelligent Laptop Teammate for Implicit Posture Correction</p>
         <dl class="product-facts"><div><dt>ROLE</dt><dd>Project lead<br />Product &amp; interaction design</dd></div><div><dt>INSTITUTION</dt><dd>HKU RoboCPS Lab</dd></div><div><dt>TEAM</dt><dd>Tsz Pi Liu · Sijin Qu<br />Zhengji Liang · Guiyin Tian</dd></div><div><dt>CONTEXT</dt><dd>IEEE RO-MAN Robot Design Competition · 2026</dd></div></dl>
@@ -80,6 +82,9 @@
     <footer class="tilt-footer"><span>© <span id="year"></span> Tsz Pi Liu</span><span>TILT</span></footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      const projectPortfolioStatus = document.querySelector('.project-portfolio-status');
+      const projectPortfolioDetail = document.getElementById('project-portfolio-status-detail');
+      projectPortfolioStatus.addEventListener('click', () => { const isOpen = projectPortfolioStatus.getAttribute('aria-expanded') === 'true'; projectPortfolioStatus.setAttribute('aria-expanded', String(!isOpen)); projectPortfolioDetail.hidden = isOpen; });
       const awardDialog = document.getElementById('award-dialog');
       document.querySelectorAll('[data-award-open]').forEach((button) => button.addEventListener('click', () => awardDialog.showModal()));
       document.querySelector('[data-award-close]').addEventListener('click', () => awardDialog.close());
