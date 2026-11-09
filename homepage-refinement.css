@@ -1,0 +1,102 @@
+/* Homepage refinement: formal research profile with a quieter, more human rhythm. */
+:root{--ink:#1c2935;--muted:#5e6d7c;--blue:#25577d;--rule:#d8e1e8;--paper:#f4f7f9;--white:#fff;--page:1320px;--rail:312px;--pad-x:clamp(38px,5.3vw,82px)}
+body{background:#edf2f5}
+.topbar{min-height:72px;gap:48px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom-color:#d5dfe6}
+.wordmark{font-size:17px;letter-spacing:-.025em}
+.topbar nav{gap:30px}
+.topbar nav a{position:relative;padding:6px 0;color:#354352;transition:color .18s ease}
+.topbar nav a::after{position:absolute;right:0;bottom:1px;left:0;height:1px;background:var(--blue);content:"";transform:scaleX(0);transform-origin:left;transition:transform .18s ease}
+.topbar nav a:hover,.topbar nav a:focus-visible{color:var(--blue);text-decoration:none}
+.topbar nav a:hover::after,.topbar nav a:focus-visible::after{transform:scaleX(1)}
+.portfolio-status{align-items:center;padding:7px 10px;border:1px solid #d6e0e7;border-radius:5px;background:#f8fafb;transition:border-color .18s ease,background .18s ease}
+.portfolio-status:hover{border-color:#9eb7c9;background:#f1f6f9}
+.portfolio-status strong{font-size:12px}
+.page-shell{min-height:calc(100vh - 72px);margin:28px auto 36px;overflow:hidden;border:1px solid #d7e0e7;border-radius:12px;background:var(--white);box-shadow:0 16px 44px rgba(27,47,64,.055)}
+.profile-rail{top:72px;height:calc(100vh - 100px);padding:46px 33px 30px;border-right-color:#d7e0e7;background:linear-gradient(180deg,#f6f8fa 0%,#f2f5f7 100%)}
+.profile-photo{height:clamp(178px,24vh,242px);margin-bottom:27px;border:1px solid #d4dfe7;border-radius:7px;background:#e9eef2}
+.profile-photo img{filter:saturate(.94) contrast(1.02)}
+.profile-rail h1{margin-bottom:8px;font-size:34px;letter-spacing:-.045em}
+.institution{margin-bottom:19px;font-size:13px;letter-spacing:.01em}
+.profile-links{gap:8px;margin-bottom:17px}
+.profile-links a{width:36px;height:36px;border-radius:5px;border-color:#c8d6e0;box-shadow:0 1px 1px rgba(22,39,53,.025);transition:transform .16s ease,border-color .16s ease,background .16s ease}
+.profile-links a:hover{border-color:var(--blue);background:#eef5f9;transform:translateY(-1px)}
+.profile-email{margin:-5px 0 20px;font-size:11px;font-weight:600;letter-spacing:.01em}
+.affiliation{padding-top:17px;border-top:1px solid #d6e0e7;font-size:13px;line-height:1.72}
+.profile-legal{padding-top:25px;color:#718090}
+.content-column{background:#fff}
+.cv-section{padding:42px var(--pad-x);border-bottom-color:#e0e6eb}
+.cv-section h2{position:relative;margin-bottom:21px;padding-bottom:10px;font-size:12px;letter-spacing:.115em}
+.cv-section h2::after{position:absolute;bottom:0;left:0;width:28px;height:2px;background:#8eb1c8;content:""}
+.about-section{padding-top:60px;padding-bottom:41px;background:linear-gradient(110deg,#fff 0%,#fbfcfd 73%,#f4f8fa 100%)}
+.about-section>div,.section-body{max-width:790px}
+.about-section p{font-size:16px;line-height:1.78}
+.about-section p:first-child{max-width:700px;color:#263746;font-size:18px;line-height:1.67;letter-spacing:-.012em}
+.about-section p+p{max-width:765px;color:#3f4f5e}
+.homepage-news-panel{margin-top:29px!important;border:1px solid #cbdce7!important;border-radius:7px;background:#edf5f9!important;box-shadow:inset 3px 0 0 #91b7d0!important}
+.homepage-news-panel>h2{margin-bottom:1px!important}
+.homepage-news-panel .homepage-news-item{border-bottom-color:#d0e0e9!important}
+.homepage-news-panel .homepage-news-item a{text-decoration-thickness:1px}
+.project-group-label{margin-bottom:15px;color:#688096;font-size:10px;letter-spacing:.12em}
+.project-group+.project-group{margin-top:30px;padding-top:27px;border-top-color:#e0e7ec}
+.project-feature{gap:30px;padding:22px;border:1px solid #d9e4eb;border-radius:8px;background:#f8fafb}
+.project-heading>span{margin-bottom:7px;color:#718192;font-size:11px;font-weight:700;letter-spacing:.06em}
+.project-heading h3,.entry h3{font-size:17px;line-height:1.36}
+.project-heading h3 a{color:#214f74}
+.project-details p,.entry p{font-size:14px;line-height:1.68}
+.project-authors-home{margin-top:9px;color:#687787}
+.project-meta.project-award-highlight-home{margin-top:15px!important;border-radius:4px;border-color:#bfd2df;background:#edf5f9}
+.project-award{align-self:center}
+.project-award img{border-color:#cfdae2;box-shadow:0 5px 16px rgba(31,54,73,.06)}
+.skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:820px}
+.skill-groups article.skill-item{border:1px solid #d9e3e9;border-radius:7px;background:#fbfcfd;transition:border-color .18s ease,box-shadow .18s ease}
+.skill-groups article.skill-item:hover{border-color:#b9cfdd;box-shadow:0 5px 16px rgba(29,58,78,.04)}
+.skill-toggle{min-height:58px;padding:13px 16px}
+.skill-toggle span:first-child{font-size:14px}
+.skill-detail{padding:0 18px 16px}
+.skill-detail ul{gap:9px;padding-left:17px}
+.skill-detail li{font-size:12px;line-height:1.65}
+.entry{position:relative;padding:18px 0 19px 19px;border-top:0}
+.entry::before{position:absolute;top:21px;bottom:-1px;left:0;width:2px;background:#d6e4ed;content:""}
+.entry:last-child::before{bottom:20px}
+.entry time{margin-bottom:6px;color:#668198;font-weight:700;letter-spacing:.02em}
+.entry h3{margin-bottom:6px}
+.entry p{max-width:720px}
+.entry a{display:inline-block;margin-top:5px;font-weight:600}
+.compact-section{background:#fbfcfd}
+@media(min-width:1500px){.page-shell{margin-top:34px;margin-bottom:42px}.profile-rail{padding-inline:36px}}
+@media(max-width:980px) and (min-width:761px){:root{--rail:265px;--pad-x:42px}.topbar{gap:30px}.topbar nav{gap:21px}.profile-rail{padding-inline:27px}.project-feature{gap:21px;padding:18px}.skill-groups{grid-template-columns:1fr}}
+@media(max-width:760px){body{background:#fff}.topbar{min-height:0;padding:16px 7% 13px;gap:11px;background:rgba(255,255,255,.98)}.topbar nav{gap:clamp(17px,6.4vw,32px);padding-top:2px}.topbar nav a{padding:4px 0}.portfolio-status{padding:5px 9px}.page-shell{margin:0;border:0;border-radius:0;box-shadow:none}.profile-rail{height:auto;padding:36px 7% 30px;border-bottom-color:#dde5ea;background:linear-gradient(180deg,#f5f8fa,#f0f4f6)}.profile-photo{margin-bottom:18px;border-radius:50%;border-color:#ccd9e2}.profile-rail h1{font-size:31px}.institution{margin-bottom:15px}.affiliation{padding-top:15px}.profile-legal{margin-top:27px;padding-top:0}.cv-section{padding:31px var(--pad-x)}.cv-section h2{margin-bottom:18px;padding-bottom:8px}.about-section{padding-top:35px;padding-bottom:31px}.about-section p{font-size:14px;line-height:1.72}.about-section p:first-child{font-size:16px;line-height:1.66}.homepage-news-panel{margin-top:24px!important;border-radius:6px}.project-feature{padding:17px;border-radius:7px}.project-heading h3,.entry h3{font-size:15px}.project-details p,.entry p{font-size:13px;line-height:1.62}.skill-groups{grid-template-columns:1fr;gap:9px}.skill-toggle{min-height:54px;padding-inline:14px}.entry{padding:15px 0 16px 15px}.entry::before{top:18px}.entry:last-child::before{bottom:17px}}
+@media(max-width:390px){.topbar nav{gap:15px}.topbar nav a{font-size:11px}.cv-section{padding-block:27px}.project-feature{padding:15px}}
+
+/* Keep the News panel compact inside the About section. */
+.homepage-news-panel{padding:17px 21px!important}
+.homepage-news-panel>.homepage-news-list{margin-top:0!important}
+@media(max-width:760px){.profile-rail{top:auto}.homepage-news-panel{padding:14px 15px!important}}
+
+/* Desktop behaves as a split academic profile: the rail stays still while the content column scrolls. */
+@media(min-width:761px){
+  html,body{height:100%;overflow:hidden}
+  .topbar{position:relative}
+  .page-shell{height:calc(100vh - 72px);min-height:0;margin:0 auto;border-top:0;border-radius:0 0 12px 12px}
+  .profile-rail{position:relative;top:auto;height:100%;overflow-y:auto;overscroll-behavior:contain}
+  .content-column{height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b9cbd7 transparent}
+  .content-column::-webkit-scrollbar,.profile-rail::-webkit-scrollbar{width:8px}
+  .content-column::-webkit-scrollbar-thumb,.profile-rail::-webkit-scrollbar-thumb{border:2px solid transparent;border-radius:9px;background:#b9cbd7;background-clip:padding-box}
+}
+
+/* A restrained type scale keeps labels, body copy, metadata and headings coherent. */
+body,button{font-family:Arial,Helvetica,sans-serif}
+.about-section p:first-child,.about-section p+p{font-size:16px;line-height:1.72}
+.project-details p,.entry p,.skill-detail li{font-size:14px;line-height:1.68}
+.project-heading h3,.entry h3{font-size:16px;line-height:1.4}
+.project-heading>span,.entry time,.project-authors-home,.project-meta.project-award-highlight-home,.profile-email{font-size:12px}
+.homepage-news-panel .homepage-news-item div{font-size:14px;line-height:1.55}
+.homepage-news-panel .homepage-news-item time{font-size:12px;line-height:1.55}
+@media(max-width:760px){
+  html,body{height:auto;overflow:visible}
+  .page-shell{height:auto;min-height:0;margin:0;border-radius:0}
+  .profile-rail,.content-column{height:auto;overflow:visible}
+  .about-section p:first-child,.about-section p+p{font-size:14px;line-height:1.72}
+  .project-details p,.entry p,.skill-detail li{font-size:13px}
+  .homepage-news-panel .homepage-news-item div{font-size:13px}
+}
