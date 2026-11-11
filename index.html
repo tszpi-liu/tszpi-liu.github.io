@@ -47,7 +47,7 @@
         const newsSection=document.createElement('section');
         newsSection.id='news-panel';
         newsSection.className='cv-section homepage-news-panel';
-        newsSection.innerHTML='<div class="section-heading-row"><h2>News</h2><button class="section-toggle" type="button" aria-expanded="false">Show all news <span aria-hidden="true">+</span></button></div><div class="homepage-news-list"><article class="homepage-news-item is-highlighted"><time>2026.10</time><div>Collaborating with <a href="https://www.milab.design/" target="_blank" rel="noreferrer">Mi Lab</a> at Tsinghua University.</div></article><article class="homepage-news-item"><time>2026.8</time><div>TILT received the <strong>Best Technical Design Award</strong> at IEEE RO-MAN 2026.</div></article></div>';
+        newsSection.innerHTML='<div class="section-heading-row"><h2>News</h2><button class="section-toggle" type="button" aria-expanded="false">Show all news <span aria-hidden="true">+</span></button></div><div class="homepage-news-list"><article class="homepage-news-item is-highlighted"><time>2026.8</time><div>TILT received the <strong>Best Technical Design Award</strong> at IEEE RO-MAN 2026.</div></article></div>';
         aboutSection.append(newsSection);
         const newsHeader=newsSection.querySelector('.section-heading-row');
         newsSection.replaceChildren(newsHeader.querySelector('h2'),newsSection.querySelector('.homepage-news-list'),newsHeader.querySelector('.section-toggle'));
